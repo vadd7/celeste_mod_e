@@ -12,7 +12,7 @@ class SpeedCrystal : DirectionCrystal {
 			_speed_type = value;
 			switch (value) {
 				case SpeedType.Normal: speed_multiply = new(1.1f, 1f); break;
-				case SpeedType.Faster: speed_multiply = new(1.35f, 1.3f); break;
+				case SpeedType.Faster: speed_multiply = new(1.55f, 1.4f); break;
 			}
 		}
 	}
