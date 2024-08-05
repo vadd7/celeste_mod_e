@@ -28,10 +28,10 @@ class SpeedCrystal : DirectionCrystal {
 		speed_type = speed_multiply;
 
 		// change particle colours.
-		//switch (speed_multiply) {
-		//	case SpeedType.Normal: p_shatter.Color = p_regen.Color = p_glow.Color = Color.LightGreen; p_shatter.Color2 = p_regen.Color2 = p_glow.Color2 = Color.Green; break;
-		//	case SpeedType.Faster: p_shatter.Color = p_regen.Color = p_glow.Color = Color.LightPink; p_shatter.Color2 = p_regen.Color2 = p_glow.Color2 = Color.Purple; break;
-		//}
+		switch (speed_multiply) {
+			case SpeedType.Normal: p_shatter.Color = p_regen.Color = p_glow.Color = Color.LightGreen; p_shatter.Color2 = p_regen.Color2 = p_glow.Color2 = Color.Green; break;
+			case SpeedType.Faster: p_shatter.Color = p_regen.Color = p_glow.Color = Color.PaleVioletRed; p_shatter.Color2 = p_regen.Color2 = p_glow.Color2 = Color.Red; break;
+		}
 	}
 
 	public override void OnPlayer(Player player) {

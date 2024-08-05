@@ -71,16 +71,16 @@ abstract class DirectionCrystal : Entity {
 		Add(new PlayerCollider(new Action<Player>(this.OnPlayer), null, null));
 
 		// yoink particles from refill:
-		p_shatter = Refill.P_Shatter;
-		p_regen = Refill.P_Regen;
-		p_glow = Refill.P_Glow;
+		p_shatter = new ParticleType(Refill.P_Shatter);
+		p_regen =  new ParticleType(Refill.P_Regen);
+		p_glow =  new ParticleType(Refill.P_Glow);
 
 		// change the colour of yoinked particles.
 		switch (direction) {
 			case FallingDirection.UP	: p_shatter.Color = p_regen.Color = p_glow.Color = Color.PaleVioletRed;	p_shatter.Color2 = p_regen.Color2 = p_glow.Color2 = Color.Red; break;
 			case FallingDirection.DOWN	: p_shatter.Color = p_regen.Color = p_glow.Color = Color.LightYellow;	p_shatter.Color2 = p_regen.Color2 = p_glow.Color2 = Color.Yellow; break;
 			case FallingDirection.LEFT	: p_shatter.Color = p_regen.Color = p_glow.Color = Color.LightCyan;		p_shatter.Color2 = p_regen.Color2 = p_glow.Color2 = Color.Cyan; break;
-			case FallingDirection.RIGHT	: p_shatter.Color = p_regen.Color = p_glow.Color = Color.LightPink;		p_shatter.Color2 = p_regen.Color2 = p_glow.Color2 = Color.Pink; break;
+			case FallingDirection.RIGHT	: p_shatter.Color = p_regen.Color = p_glow.Color = Color.LightPink;		p_shatter.Color2 = p_regen.Color2 = p_glow.Color2 = Color.HotPink; break;
 		}
 
 
