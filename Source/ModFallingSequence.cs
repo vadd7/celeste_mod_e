@@ -23,8 +23,9 @@ class ModFallingSequence {
 
 			self.HasStartedFalling = true;
 
-			// 1 custom line!
+			// 2 custom line!
 			Vector2 fall_dir = celeste_mod_eModule.gravity;
+			Vector2 multiplyer = celeste_mod_eModule.speed_multiplier;
 
 			Level level;
 			for (;;) {
@@ -63,7 +64,7 @@ class ModFallingSequence {
 				for (;;) {
 					level = self.SceneAs<Level>();
 
-					Vector2 multiplyer = new(1.1f, 1f);
+					
 					
 
 					// changed code starts here!

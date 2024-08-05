@@ -7,6 +7,7 @@ public class celeste_mod_eModule : EverestModule {
     public static celeste_mod_eModule Instance { get; private set; }
 
 	public static Vector2 gravity = new(0f, 1f);
+	public static Vector2 speed_multiplier = new(1.1f, 1f);
 	public static bool enabled = false;
 
 	// decided not to use settings at all. just broke shit

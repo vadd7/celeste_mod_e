@@ -41,4 +41,27 @@
 		<Center/>
 		<Anim id="flash" path="flash" delay="0.05" frames="0-5"/>
 	</CustomModECrystalRightFlash>
+
+
+	<!-- Speed Crystals -->
+	<CustomModESpeedNormal path="crystals/speed_normie/" start="idle">
+		<Center/>
+		<Loop id="idle" path="idle" delay="0.1" frames="0-4"/>
+	</CustomModESpeedNormal>
+
+	<CustomModESpeedNormalFlash path="crystals/speed_normie/" start="flash">
+		<Center/>
+		<Anim id="flash" path="flash" delay="0.05" frames="0-5"/>
+	</CustomModESpeedNormalFlash>
+
+
+	<CustomModESpeedFaster path="crystals/speed_fast/" start="idle">
+		<Center/>
+		<Loop id="idle" path="idle" delay="0.1" frames="0-4"/>
+	</CustomModESpeedFaster>
+
+	<CustomModESpeedFasterFlash path="crystals/speed_fast/" start="flash">
+		<Center/>
+		<Anim id="flash" path="flash" delay="0.05" frames="0-5"/>
+	</CustomModESpeedFasterFlash>
 </Sprites>

@@ -10,7 +10,7 @@ enum FallingDirection {
 	DOWN, 
 	LEFT, 
 	RIGHT, 
-	FREEZE
+	OTHER
 }
 
 abstract class DirectionCrystal : Entity {
@@ -28,16 +28,16 @@ abstract class DirectionCrystal : Entity {
 	//public static ParticleType P_ShatterTwo; 
 	//public static ParticleType P_RegenTwo;
 	//public static ParticleType P_GlowTwo;
-	private ParticleType p_shatter;
-	private ParticleType p_regen;
-	private ParticleType p_glow;
+	public ParticleType p_shatter;
+	public ParticleType p_regen;
+	public ParticleType p_glow;
 	private Wiggler wiggler;
 	private BloomPoint bloom;
 	private VertexLight light;
 	private Level level;
 	private SineWave sine;
 	private bool oneUse;
-	private float respawnTimer;
+	public float respawnTimer;
 	
 	// artifact from when i actually used sessiondata
 	//private static SessionData mod_settings = celeste_mod_eModule.Session;
@@ -54,7 +54,7 @@ abstract class DirectionCrystal : Entity {
 				case FallingDirection.DOWN  : fall_direction_vec2 = new(0f, 1f); break;
 				case FallingDirection.LEFT  : fall_direction_vec2 = new(-1f, 0f); break;
 				case FallingDirection.RIGHT : fall_direction_vec2 = new(1f, 0f); break;
-				case FallingDirection.FREEZE: fall_direction_vec2 = new(0f, 0f); break;
+				case FallingDirection.OTHER: fall_direction_vec2 = new(0f, 0f); break;
 			}
 		}
 	}
@@ -66,8 +66,6 @@ abstract class DirectionCrystal : Entity {
 	// sprites are taken as strings, so it isnt a reference to the static field, and it doesnt all just change one sprite
 	public DirectionCrystal(Vector2 position, bool oneuse, FallingDirection direction, string spr, string outline, string flash) : base(position) {
 		celeste_mod_eModule.enabled = true;
-
-		//Logger.Log("celeste_mod_e","Initializing Up Direction Crystal.");
 
 		Collider = new Hitbox(16f, 16f, -8f, -8f);
 		Add(new PlayerCollider(new Action<Player>(this.OnPlayer), null, null));
@@ -118,8 +116,6 @@ abstract class DirectionCrystal : Entity {
 		sine.Randomize();
 		UpdateY();
 		base.Depth = -100;
-
-		Logger.Log("celeste_mod_e","Initialized Up Direction Crystal.");
 	}
 
 	// this suprisingly didnt get modified much if at all.
@@ -162,7 +158,7 @@ abstract class DirectionCrystal : Entity {
 	}
 
 	// this one is the only one that needed some modifications.
-	public void OnPlayer(Player player) {
+	public virtual void OnPlayer(Player player) {
 		celeste_mod_eModule.enabled = true;
 
 		if (celeste_mod_eModule.gravity != fall_direction_vec2) {

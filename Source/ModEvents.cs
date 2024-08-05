@@ -11,6 +11,7 @@ public class ModEvents {
 
 	public static void ModOnTransitionTo(Level level, LevelData next, Vector2 direction) {
 		celeste_mod_eModule.gravity = new(0f, 1f);		
+		celeste_mod_eModule.speed_multiplier = new(1.1f, 1f);
 	}
 
 	public static void OnExit(Level level, LevelExit exit, LevelExit.Mode mode, Session session, HiresSnow snow) {
@@ -18,6 +19,7 @@ public class ModEvents {
 	}
 
 	public static void ModOnDie(Player player) {
-		celeste_mod_eModule.gravity = new(0f, 1f);	
+		celeste_mod_eModule.gravity = new(0f, 1f);
+		celeste_mod_eModule.speed_multiplier = new(1.1f, 1f);
 	}
 }
