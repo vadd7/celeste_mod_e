@@ -1,0 +1,44 @@
+<Sprites>
+	<CustomModECrystalUp path="crystals/crystal_up/" start="idle">
+		<Center/>
+		<Loop id="idle" path="idle" delay="0.1" frames="0-4"/>
+	</CustomModECrystalUp>
+
+	<CustomModECrystalUpFlash path="crystals/crystal_up/" start="flash">
+		<Center/>
+		<Anim id="flash" path="flash" delay="0.05" frames="0-5"/>
+	</CustomModECrystalUpFlash>
+
+
+	<CustomModECrystalDown path="crystals/crystal_down/" start="idle">
+		<Center/>
+		<Loop id="idle" path="idle" delay="0.1" frames="0-4"/>
+	</CustomModECrystalDown>
+
+	<CustomModECrystalDownFlash path="crystals/crystal_down/" start="flash">
+		<Center/>
+		<Anim id="flash" path="flash" delay="0.05" frames="0-5"/>
+	</CustomModECrystalDownFlash>
+
+
+	<CustomModECrystalLeft path="crystals/crystal_left/" start="idle">
+		<Center/>
+		<Loop id="idle" path="idle" delay="0.1" frames="0-4"/>
+	</CustomModECrystalLeft>
+
+	<CustomModECrystalLeftFlash path="crystals/crystal_left/" start="flash">
+		<Center/>
+		<Anim id="flash" path="flash" delay="0.05" frames="0-5"/>
+	</CustomModECrystalLeftFlash>
+
+
+	<CustomModECrystalRight path="crystals/crystal_right/" start="idle">
+		<Center/>
+		<Loop id="idle" path="idle" delay="0.1" frames="0-4"/>
+	</CustomModECrystalRight>
+
+	<CustomModECrystalRightFlash path="crystals/crystal_right/" start="flash">
+		<Center/>
+		<Anim id="flash" path="flash" delay="0.05" frames="0-5"/>
+	</CustomModECrystalRightFlash>
+</Sprites>

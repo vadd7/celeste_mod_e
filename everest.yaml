@@ -1,0 +1,6 @@
+- Name: celeste_mod_e
+  Version: 0.1.0
+  DLL: bin/celeste_mod_e.dll
+  Dependencies:
+    - Name: EverestCore
+      Version: 1.4673.0
